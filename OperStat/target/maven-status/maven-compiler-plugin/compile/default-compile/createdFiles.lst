@@ -1,0 +1,11 @@
+ru\gruzovichkof\operstat\helpers\Sender.class
+ru\gruzovichkof\operstat\model\Credentials.class
+ru\gruzovichkof\operstat\web\Download.class
+ru\gruzovichkof\operstat\web\GetExcel.class
+ru\gruzovichkof\operstat\web\Mystatistic.class
+ru\gruzovichkof\operstat\web\Call.class
+ru\gruzovichkof\operstat\web\Index.class
+ru\gruzovichkof\operstat\helpers\Sender$1.class
+ru\gruzovichkof\operstat\core\AbstractServlet.class
+ru\gruzovichkof\operstat\web\Authentication.class
+ru\gruzovichkof\operstat\web\Registration.class

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Регистрация</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/groundwork.css" type="text/css" rel="stylesheet">
+        <link href="css/style.css" type="text/css" rel="stylesheet">
+        <link rel="icon" type="image/png" href="https://image.ibb.co/foupj6/favicon.png" sizes="16x16">
+    </head>
+    <body>
+        <a target="blank" href="http://biznesfon.ru">
+            <img class="logimg" src="https://s8.hostingkartinok.com/uploads/images/2017/10/96bfde63dbe76ee39596a1cbed77c3bb.png" alt="logotype"/>
+        </a>
+        <div class="logo headertext">Operator's Statistic App</div>    
+        <div class="animated fadeInDownBig">
+            <div class="headertext">Страница регистрации</div>
+            <div class="underheadertext">Вернуться на страницу <b><a href="/os">авторизации</a></b></div>
+            <div class="alert box infomsgreg">
+                Номер линии должен начинаться со строчной латинской буквы "p", далее Ваш номер линии ПРОТЕЙ.<br>
+                Пароль должен содержать только латинский алфавит и цифры, и быть длиной от 3 до 30 символов.
+            </div>   
+            <div class="one sixths centered">   
+                <form action="Registration" method="post">
+                    <input class="gap-bottom" required type="email" name="email" placeholder="Введите email">
+                    <input class="gap-bottom" required type="text" name="name" placeholder="Введите Ваше имя">
+                    <input class="gap-bottom" required type="text" name="surname" placeholder="Введите Вашу фамилию">
+                    <input class="gap-bottom" required type="text" name="line" placeholder='Латинская "p" и Ваш номер линии' pattern="p[0-9]{3,5}"> 
+                    <input class="gap-bottom" required type="password" name="password" placeholder="Придумайте пароль" pattern="[A-Za-z0-9]{3,30}">
+                    <input class="gap-bottom" required type="password" name="repassword" placeholder="Повторите пароль" pattern="[A-Za-z0-9]{3,30}">
+                    
+                    <select required class="gap-bottom" name="department">
+                        <option value=''>Выберите подразделение</option>
+                        <option value='Грузовичкоф'>Грузовичкоф</option>
+                        <option value='Франшиза'>Франшиза</option>
+                    </select>
+                    
+                    <button class="pull-right asphalt">Зарегистрироваться</button>                 
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

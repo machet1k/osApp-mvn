@@ -1,0 +1,42 @@
+.section .selection {
+  margin: 0;
+  padding: 0;
+}
+
+.section .selection label {
+  display: inline-block;
+  width:150px;
+  background-color: #f2ddae;
+  border-radius: 6px; /*6px 0 0 6px*/
+  color: #966e16;
+  padding:3px;
+  margin: 1px 0 1px 0;
+  cursor: pointer;
+  text-align: center; 
+}
+
+.section .selection label:hover {
+  background-color: #fff6e2;
+}
+
+.section .selection input[type=radio] {
+  float: left;
+}
+
+.section .selection input[type=radio]:checked ~ label {
+  background-color: #ffcc5b;
+}
+
+.section {
+    float: left;
+}
+
+.count4op {
+    padding: 3px 6px;
+    margin: 1px 0 1px 0;
+    background-color: #ffcc5b;
+    color: #966e16;
+    float: right;
+    border-radius: 0 6px 6px 0;
+    font-weight: 700;
+}

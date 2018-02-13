@@ -1,0 +1,151 @@
+html, body {
+    font-family: monospace;
+    background: #fafafa;
+    font-size: 14px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h3 span {
+    color: #d5d5d5;
+}
+
+h4 span {
+    cursor:pointer;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+ul {
+    margin-left: 10px;
+}
+
+label {
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    padding: 2px 5px 2px 2px;
+    border-radius: 10px;
+    font-weight: 100;
+}
+
+input[type=radio] {
+    margin: 2px 4px;
+}
+
+.scalable label:hover {
+    transform: scale(1.05);
+}
+
+.panel-heading {
+    border: 1px red solid;
+    font-size: 1.5em;
+}
+
+.headertext {
+    margin: 10px;
+    text-align: center;
+    font: 20pt monospace;
+}
+
+.underheadertext {
+    text-align: center;
+}
+
+align_left {
+    float: left;
+}
+
+.align_right {
+    float: right;
+}
+
+.logo {
+    color: #e6e6e6;
+    letter-spacing: -10px;
+    margin-bottom: 0;
+    font: 800 120px Tahoma;
+}
+
+.header {
+    font-weight: 900;
+    font-size: 16px;
+}
+
+hr {
+    color: #eee; /*для IE */
+    background-color: #eee; /*для Firefox, Opera, Safari*/
+    border:0px none;
+    height:1px; /* высота 1px IE, Firefox, Opera, Safari */
+    clear:both; /* для очистки, если тег идет после float елемента */
+}
+
+.containerDownload {
+    
+    margin: 0 auto;
+}
+
+#download div {
+    display: inline-block;
+}
+
+body {
+    background-size:cover;
+    background-position:top center;
+    background-attachment:fixed;
+    background-repeat:no-repeat;
+}
+
+.logimg {
+    position: absolute;
+    width: 200px;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0.4;                      
+}
+
+.logimg:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.downloadbtn {
+    margin: 15px 20px 0 0;
+}
+
+.row {
+    margin: 0;
+}
+
+tr td {
+    text-align: center;
+    height: 30px;
+}
+
+.bold td {
+    font-weight: 700;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+.wider {
+    white-space: nowrap;
+}
+
+.infomsg {
+    margin: 0 auto;
+    text-align: justify;
+    width: 800px; 
+    padding: 10px;
+}
+
+.infomsgreg {
+    margin: 15px auto;
+    text-align: justify;
+    width: 735px; 
+    padding: 10px;
+}
