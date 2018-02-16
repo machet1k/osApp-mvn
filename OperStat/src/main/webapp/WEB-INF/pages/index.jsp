@@ -34,6 +34,7 @@
                         $('#load_capacity').css('visibility', 'hidden');
                         $('#load_capacity').prop('required', false);
                         $('#cost').css("display", 'none');
+                        $('#corporate').css("display", 'none');
                     }  break;
                     case "Большегрузы": {
                         $('#line').css("display", 'none');
@@ -48,6 +49,7 @@
                         $('#load_capacity').css('visibility', 'visible');
                         $('#load_capacity').prop('required', true);
                         $('#cost').css("display", 'block');
+                        $('#corporate').css("display", 'none');
                     }  break;
                     case "VIP линия": {
                         $('#line').css("display", 'none');
@@ -62,6 +64,7 @@
                         $('#load_capacity').css('visibility', 'hidden');
                         $('#load_capacity').prop('required', false);
                         $('#cost').css("display", 'none');
+                        $('#corporate').css("display", 'none');
                     }  break;
                     case "Эвакуаторы": {
                         $('#line').css("display", 'none');
@@ -76,6 +79,7 @@
                         $('#load_capacity').css('visibility', 'hidden');
                         $('#load_capacity').prop('required', false);
                         $('#cost').css("display", 'block');
+                        $('#corporate').css("display", 'none');
                     }  break;
                     case "Транспортная компания": {
                         $('#line').css("display", 'none');
@@ -90,6 +94,7 @@
                         $('#load_capacity').css('visibility', 'hidden');
                         $('#load_capacity').prop('required', false);
                         $('#cost').css("display", 'none');
+                        $('#corporate').css("display", 'none');
                     }  break;
                     case "Сборный груз": {
                         $('#line').css("display", 'none');
@@ -104,6 +109,7 @@
                         $('#load_capacity').css('visibility', 'hidden');
                         $('#load_capacity').prop('required', false);
                         $('#cost').css("display", 'block');
+                        $('#corporate').css("display", 'none');
                     }  break;
                     case "Чат отдела продаж": {
                         $('#line').css("display", 'none');
@@ -118,6 +124,7 @@
                         $('#load_capacity').css('visibility', 'hidden');
                         $('#load_capacity').prop('required', false);
                         $('#cost').css("display", 'block');
+                        $('#corporate').css("display", 'none');
                     }  break;
                     case "Консультации": {
                         $('#line').css("display", 'none');
@@ -132,6 +139,7 @@
                         $('#load_capacity').css('visibility', 'hidden');
                         $('#load_capacity').prop('required', false);
                         $('#cost').css("display", 'block');
+                        $('#corporate').css("display", 'none');
                     }  break;
                     case "Жалобы": {
                         $('#line').css("display", 'none');
@@ -146,6 +154,22 @@
                         $('#load_capacity').css('visibility', 'hidden');
                         $('#load_capacity').prop('required', false);
                         $('#cost').css("display", 'none');
+                        $('#corporate').css("display", 'none');
+                    }  break;
+                    case "Корпоративный отдел": {
+                        $('#line').css("display", 'none');
+                        $('#truck').css("display", 'none');
+                        $('#vipline').css("display", 'none');
+                        $('#evac').css("display", 'none');
+                        $('#trans_comp').css("display", 'none');
+                        $('#consolidate').css("display", 'none');
+                        $('#sales_depart').css("display", 'none');
+                        $('#consultation').css("display", 'none');
+                        $('#complaint').css("display", 'none');
+                        $('#load_capacity').css('visibility', 'hidden');
+                        $('#load_capacity').prop('required', false);
+                        $('#cost').css("display", 'none');
+                        $('#corporate').css("display", 'block');
                     }  break;
                     default:;
                 } 
@@ -159,9 +183,10 @@
     </head>
     <body>
         <div style="width: 330px">
-            <div> 
-                <form action="Mystatistic" method="post">
-                    <button type="submit" class="btn btn-link">Моя статистика</button>
+            <div style="padding: 10px 15px; margin: 0 auto;"> 
+                <form method="post">
+                    <button formaction="Mystatistic" type="submit" class="btn-success">Моя статистика</button>
+                    <button formaction="Incorrect"   type="submit" class="btn-danger">Мои звонки</button>
                 </form>
             </div>
             <form action="Call" method="post">
@@ -178,7 +203,7 @@
                                     onchange="visibilityOfAddFunc(this.value)" 
                                     style="width: 200px; margin: 0 0 0 100px; padding: 5px;">
                                 <%
-                                    String[] arrAddFunc = {"Линия", "Большегрузы", "VIP линия", "Эвакуаторы", "Транспортная компания", "Сборный груз", "Чат отдела продаж", "Консультации", "Жалобы"};
+                                    String[] arrAddFunc = {"Линия", "Большегрузы", "VIP линия", "Эвакуаторы", "Транспортная компания", "Сборный груз", "Чат отдела продаж", "Консультации", "Жалобы", "Корпоративный отдел"};
                                     String[] arrAddFuncSelected = new String[arrAddFunc.length];
                                     for (int i = 0; i < arrAddFunc.length; i++) {
                                         arrAddFuncSelected[i] = "";
@@ -238,6 +263,7 @@
                         mapCallsType.put("Сборный груз", new String[]{"consolidate", "Заказ", "Консультация", "Дорого", "Не сборный груз", "Нет ответа", "Нет ответа", "Не сможем предоставить", "Изменение заказа", "Не актуально"});
                         mapCallsType.put("Чат отдела продаж", new String[]{"sales_depart", "Заказ", "Консультация", "Дорого", "Запрос на сборный груз", "Корректировка", "Доп.информация", "Не можем предоставить", "Передано другому оператору", "Другое"});
                         mapCallsType.put("Консультации", new String[]{"consultation", "Заказ", "Просил перезвонить", "Уже не интересует", "Не берёт трубку", "Дорого", "Скидка не нужна", "Переехали с нами", "Переехали сами", "Конкуренты", "Сами перезвонят", "Другое"});
+                        mapCallsType.put("Корпоративный отдел", new String[]{"corporate", "Адрес офиса","Баланс/депозит","Вопрос по задолженности","Документы в электронном виде","Документы за наличный расчёт","Доп.информация по заказу","Доп.контактная информация","Заключение договора","Запись на получение залога","Запрос акта сверки","Запрос данных на водителя","Запрос оригиналов документов","Запрос на увеличение отсрочки","Запрос уставных документов","Кредит","Обзвон роботом","Опоздание ТС","Ошиблись","Ошибочный перевод от оператора","Перевод от оператора по задолженности","Претензия","Пришло ли письмо","Проверка поступления  п/п","Расчёт стоимости/оформление заказа","Реестр","Реклама (КП)","Снятие заказа","Страхование","Счёт на предоплату","ТТН"});
                         mapCallsType.put("Жалобы", new String[]{"complaint", "Жалоба на оператора", "Жалоба на экипаж", "Опоздание", "Внести изменения в заказ", "Пересчёт", "Неверный тип авто", "Нарушение ПДД", "Не согласен с доп.часами", "Проверка номера телефона", "Не согласен со стоимостью", "Проверка стоимости заказа", "Данные", "Неверная дата", "Заказ с сайта", "Онлайн оплата", "Перегородил дорогу", "Сломался/замена авто", "Порча груза", "Другое"});
                         /* формируем функцию isRequired4Order() для установки required в cost при выборе "Заказ" */
                         out.print("<script>"

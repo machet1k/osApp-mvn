@@ -75,6 +75,7 @@ public class Authentication extends AbstractServlet {
             session.setAttribute("department", department);
             session.setAttribute("add_func", "Линия");
             session.setAttribute("username", System.getProperties().getProperty("user.name"));
+            session.setMaxInactiveInterval(3600);
             redirect("/os");
         } else {
             System.out.println(credentials.getLogin() + " " + credentials.getPassword());

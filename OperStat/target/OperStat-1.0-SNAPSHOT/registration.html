@@ -17,7 +17,7 @@
             <div class="headertext">Страница регистрации</div>
             <div class="underheadertext">Вернуться на страницу <b><a href="/os">авторизации</a></b></div>
             <div class="alert box infomsgreg">
-                Номер линии должен начинаться со строчной латинской буквы "p", далее Ваш номер линии ПРОТЕЙ.<br>
+                Если Вы регистрируетесь под номером линии ПРОТЕЙ, то начните номер линии c латинской "p".<br>
                 Пароль должен содержать только латинский алфавит и цифры, и быть длиной от 3 до 30 символов.
             </div>   
             <div class="one sixths centered">   
@@ -25,7 +25,7 @@
                     <input class="gap-bottom" required type="email" name="email" placeholder="Введите email">
                     <input class="gap-bottom" required type="text" name="name" placeholder="Введите Ваше имя">
                     <input class="gap-bottom" required type="text" name="surname" placeholder="Введите Вашу фамилию">
-                    <input class="gap-bottom" required type="text" name="line" placeholder='Латинская "p" и Ваш номер линии' pattern="p[0-9]{3,5}"> 
+                    <input class="gap-bottom" required type="text" name="line" placeholder='Ваш номер линии: XXX или pXXX' pattern="p{0,1}[0-9]{3,5}"> 
                     <input class="gap-bottom" required type="password" name="password" placeholder="Придумайте пароль" pattern="[A-Za-z0-9]{3,30}">
                     <input class="gap-bottom" required type="password" name="repassword" placeholder="Повторите пароль" pattern="[A-Za-z0-9]{3,30}">
                     

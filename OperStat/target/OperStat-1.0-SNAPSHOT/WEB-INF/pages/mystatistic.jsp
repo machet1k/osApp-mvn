@@ -19,7 +19,7 @@
                 String password = "hermes";
                 Connection connection = DriverManager.getConnection(url, username, password);
                 Statement statement = connection.createStatement();
-                String[] arrAddFunc = {"Линия", "Большегрузы", "VIP линия", "Эвакуаторы", "Транспортная компания", "Сборный груз", "Чат отдела продаж", "Консультации", "Жалобы"};
+                String[] arrAddFunc = {"Линия", "Большегрузы", "VIP линия", "Эвакуаторы", "Транспортная компания", "Сборный груз", "Чат отдела продаж", "Консультации", "Жалобы", "Корпоративный отдел"};
                 for (int stat = 0; stat < arrAddFunc.length; stat++) {
                     String query = "select CALLS_TYPE, count(*) from calls where date(regtime) = CURRENT_DATE"
                              + " and line = '" + session.getAttribute("login") + "'"
@@ -36,7 +36,7 @@
                             out.print("</tr>");
                         } while (rs.next());
                         out.print("</table>");
-                    } 
+                    }
                 }
             %>
         </div>
